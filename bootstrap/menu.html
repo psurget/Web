@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#navbar div").click(function() {
+                $(this).children("ul").slideToggle("fast");
+            });
+            $("#navbar div>ul>li").mouseover(function () {
+                $(this).children("div").slideDown("fast");
+                $(this).siblings().children("div").fadeOut("fast");
+            });
+        });
+    </script>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            position: absolute;
+            top: 0;
+            width: 80%;
+            height: 900px;
+            background-color: #f0f0f0;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        #entete {
+            position: inherit;
+            height: 200px;
+            background-color: darkred;
+            width: 100%;
+        }
+
+        #navbar {
+            position: inherit;
+            height: 45px;
+            background-color: black;
+            margin-top: 155px;
+            width: 100%;
+        }
+
+        #navbar>div>a {
+            font-size: 20px;
+            color: white;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        #navbar>div {
+            margin-top: 10px;
+            width: 160px;
+        }
+
+        #navbar>div>ul {
+            position: inherit;
+            margin-top: 12px;
+            margin-left: 10px;
+            background-color: darkred;
+            width: 250px;
+            height: 150px;
+            border: 1px solid white;
+        }
+
+        #navbar>div>ul>li {
+            list-style-type: none;
+            margin-bottom: 10px;
+        }
+
+        #navbar>div>ul>li:hover {
+            background-color: orange;
+        }
+
+        #navbar>div>ul>li>a {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+        }
+
+        #navbar>div>ul>li>div {
+            position: absolute;
+            margin-top: -28px;
+            margin-left: 252px;
+            background-color: darkred;
+            height: 160px;
+            width: 180px;
+        }
+
+        #navbar>div>ul>li>div>ul {
+            list-style-type: none;
+        }
+
+        #navbar>div>ul>li>div>ul>li {
+            margin-bottom: 10px;
+        }
+
+        #navbar>div>ul>li>div>ul>li:hover {
+            background-color: orange;
+        }
+
+        #navbar>div>ul>li>div>ul>li>a {
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+            list-style-type: none;
+        }
+    </style>
+    <title>Lab 4: Menu JQuery</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="entete">
+            <div id="navbar">
+                <div>
+                    <a href="#" class="clMenu">Tous les produits</a>
+                    <ul style="display:none;">
+                        <li>
+                            <a href="#">Music</a>
+                            <div style="display:none;">
+                                <ul>
+                                    <li>
+                                        <a href="#">Jazz</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Populaire</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Urbaine</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Classique</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Livres</a>
+                            <div style="display:none;">
+                                <ul>
+                                    <li>
+                                        <a href="#">Livre 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Livre 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Livre 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Livre 4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Livres numériques</a>
+                            <div style="display:none;">
+                                <ul>
+                                    <li>
+                                        <a href="#">Livre Num1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Livre Num2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Livre Num3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Livre Num4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">Films et Séries TV</a>
+                            <div style="display:none;">
+                                <ul>
+                                    <li>
+                                        <a href="#">Film 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Film 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Film 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Film 4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

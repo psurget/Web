@@ -1,0 +1,23 @@
+html,body{
+  margin: 0;
+  padding: 10px;
+  font: arial, sans-serif;
+  font-size: 1em;
+  background-color: #f0f0f0;
+}
+
+header, footer {
+  background-color: yellowgreen;
+}
+
+article {
+  background-color: rgb(12, 152, 245);
+}
+
+aside {
+  background-color: rgb(126, 1, 69);
+}
+
+nav {
+  background-color: rgb(1, 59, 77);
+}
