@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript Ex3.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script type="text/javascript">
+    function adresse(no, rue, ville, prov, codePostal){
+               this.no=no;
+               this.rue=rue;
+                this.ville=ville;
+                this.prov=prov;
+                this.codePostal=codePostal;
+                this.afficher = function(){
+                    var adresse= this.no + ", " + this.rue + ", " + this.ville + ", " + this.prov  + ", " + this.codePostal;
+                    alert(adresse);
+                }
+                this.isValid = function(){
+                        var regex = new RegExp("^[a-zA-Z][0-9][a-zA-Z][][0-9][a-zA-Z][0-9]$");
+                        return regex.test(this.codePostal);
+                }
+        }
+
+        var obj = new adresse( "2100", "rue Guy", "Montreal", "Québec", "H1M 2GM");
+        obj.afficher();
+        alert(obj.isValid());
+
+    </script>
+    <table>
+        <thead>
+            <tr>
+            <th>no</th>
+            <th>rue</th>
+            <th>ville</th>
+            <th>province</th>
+            <th>Code postal</th>
+        </tr>
+        </thead>
+        <tbody id="idAdd"></tbody>
+    </table>
+
+    <script>
+        
+    </script>
+</body>
+</html>

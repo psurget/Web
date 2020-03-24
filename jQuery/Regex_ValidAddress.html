@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jquery Ex3.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    var objAdresse = {
+                   no: "2100",
+                   rue: "rue Guy",
+                   ville: "Montréal",
+                   prov: "Quebec",
+                   codePostal: "H5G 1M3",
+
+                afficher : function(){
+                    var adresse= this.no + ", " + this.rue + ", " + this.ville + ", " + this.prov  + ", " + this.codePostal;
+                    alert(adresse);
+                },
+
+                isValid : function(){
+                        var regex = new RegExp("^[a-zA-Z][0-9][a-zA-Z][][0-9][a-zA-Z][0-9]$");
+                        return regex.test(this.codePostal);
+                }
+            };
+                objAdresse.afficher();
+                alert(objAdresse.isValid());
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex. 6</title>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+<script>
+function dump(obj){
+    //debugger
+    var txt="";
+    $.each(obj, function(key, value)
+    {
+        txt+=key + "=" + value + "\n";
+    });
+    alert(txt);
+}
+
+var obj1={nom: "Sarrion",prenom: "Eric"};
+var obj2={
+    setAge: function(age){
+        this.age=age;
+    }
+};
+dump(obj1);
+$.extend(obj1, obj2);
+dump(obj1);
+
+obj1.setAge(40);
+dump(obj1);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

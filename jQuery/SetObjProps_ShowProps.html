@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jquery Ex5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var obj = {
+            nom: "Sarrion",
+            prenom: "Eric"
+        }
+        var txt = "";
+        for (var prop in obj) {
+            txt += prop + "=" + obj[prop] + "\n";
+        };
+        alert(txt);
+    </script>
+</body>
+
+</html>

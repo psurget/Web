@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jquery Ex4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var obj={
+            nom:"Sarrion",
+            prenom: "Eric"
+        }
+        var txt="";
+        $.each(obj, function(key, value) {
+            txt+= key + "=" + value + "\n";          
+        });
+        alert(txt);
+    </script>
+</body>
+</html>

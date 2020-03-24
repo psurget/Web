@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice 7</title>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script>
+
+        function dump(obj) {
+            //fonction pour creer un dictionnaire key/value
+            debugger
+            var txt = "";
+            $.each(obj, function (key, value) {
+                txt += key + "=" + value + "\n";
+            });
+            alert("obj: " + txt);
+        }
+
+        var obj1 = { nom: "Sarrion", prenom: "Eric" };
+        var obj2 = {
+            setAge: function(age){
+                this.age = age;
+            }
+        };
+        dump(obj1);
+        var obj = $.extend({}, obj1, obj2);
+         obj.setAge(40);
+         alert(obj.age);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
